@@ -23,6 +23,8 @@ public class TaxViewController {
 	@FXML
 	private void initialize() {
 
+		txtSalary.setText("0.0");
+		txtSalary.textProperty().addListener(new OnlyNumberChangeListener(txtSalary));
 
 		btnCalculate.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
